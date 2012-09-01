@@ -12,7 +12,6 @@ $(document).ready(function() {
         {name:'total',index:'total', width:80,align:"right",sorttype:"float"},    
         {name:'note',index:'note', width:150, sortable:false}   
       ],
-      multiselect: true,
       rowNum:10,
       autowidth: true,
       rowList:[10,20,30],
