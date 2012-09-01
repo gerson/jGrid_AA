@@ -5,7 +5,7 @@ gem 'rails', '3.2'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+gem 'pg'
 gem 'activeadmin'
 gem 'sass-rails'
 gem "meta_search",    '>= 1.1.0.pre'
@@ -21,6 +21,7 @@ end
 gem 'jquery-rails'
 
 group :development, :test do
+  gem 'sqlite3'
   gem 'heroku' #Used for heroku console
   gem 'taps' #Used for heroku console
   gem 'ruby-debug19', :require => 'ruby-debug'
