@@ -1,0 +1,4 @@
+productizer
+===========
+
+ActiveAdmin, jqGrid, Colorbox
