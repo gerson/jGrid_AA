@@ -11,7 +11,7 @@ jQuery(document).ready(function() {
         {name:'supplier',index:'supplier', width:100, align:"center"},
         {name:'quantity',index:'quantity', width:80, align:"center",sorttype:"float"},
         {name:'next_deliver',index:'next_deliver', width:80, align:"center",sorttype:"date"},
-        {name:'number_notes',index:'number_notes', width:80, align:"center",sorttype:"float"},
+        {name:'number_notes',index:'number_notes', width:80, align:"center"},
         {name:'create_note',index:'create_note', width:150, sortable:false, edittype:'select',align:"center",formatter:'showlink',formatoptions:{baseLinkUrl:'/notes/new', addParam: '&action=edit'} },
         {name:'show_note',index:'show_note', width:150, sortable:false, edittype:'select',align:"center",formatter:'showlink',formatoptions:{baseLinkUrl:'/product/notes', addParam: '&action=show'} }
       ],

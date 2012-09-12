@@ -14,10 +14,14 @@ ActiveAdmin.register Product, :as => 'Productizer' do
       #{"_search"=>"false", "nd"=>"1347245867478", "rows"=>"10", "page"=>"1", "sidx"=>"id", "sord"=>"asc", "action"=>"index", "controller"=>"admin/productizers"}
       page = params['page'];  #get the requested page
       limit = params['rows']; #get how many rows we want to have into the grid
-      sidx = params['sidx'];  #get index row - i.e. user click to sort
-      sord = params['sord'];  #get the direction
+      sidx = params['sidx'] || 'id';  #get index row - i.e. user click to sort
+      sord = params['sord'] || 'DESC';  #get the direction
       records = Product.count.to_s
-      @products = Product.select("id, name, supplier, quantity, next_deliver").page(page.to_i).per(limit.to_i)
+      if params['_search'] == 'true'
+        @products = Product.where(params['searchField'] + "= ?", params['searchString']).order(sidx+" "+sord).page(page.to_i).per(limit.to_i)
+      else
+        @products = Product.select("id, name, supplier, quantity, next_deliver").order(sidx+" "+sord).page(page.to_i).per(limit.to_i)
+      end
       
       total = @products.num_pages.to_s
       rows = []
