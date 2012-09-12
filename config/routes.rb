@@ -16,6 +16,9 @@ JGridAA::Application.routes.draw do
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
+  match 'product/notes' => 'notes#notes_by_product', :as => :notes_by_product
+
+  resources :notes, :only => [:create, :new]
 
   # Sample resource route with options:
   #   resources :products do

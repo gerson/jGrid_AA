@@ -6,6 +6,7 @@ gem 'rails', '3.2'
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
+gem 'haml-rails', ">= 0.3.4"
 gem 'activeadmin'
 gem 'sass-rails'
 gem "meta_search",    '>= 1.1.0.pre'

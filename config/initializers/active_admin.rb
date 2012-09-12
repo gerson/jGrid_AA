@@ -137,6 +137,7 @@ ActiveAdmin.setup do |config|
   config.register_stylesheet 'ui.jqgrid.css'
   config.register_stylesheet 'ui.multiselect.css'
   config.register_stylesheet 'jquery-ui-custom'
+  config.register_stylesheet 'colorbox'
 
   
   # You can provide an options hash for more control, which is passed along to stylesheet_link_tag():
@@ -148,8 +149,7 @@ ActiveAdmin.setup do |config|
   config.register_javascript 'ui.multiselect.js'
   config.register_javascript 'grid.locale-en.js'
   config.register_javascript 'load_data.js'
-
-
+  config.register_javascript 'jquery.colorbox-min.js'
 
   # == CSV options
   #

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  supplier: MyString
+  quantity: 1
+  next_deliver: 2012-09-09
+
+two:
+  name: MyString
+  supplier: MyString
+  quantity: 1
+  next_deliver: 2012-09-09

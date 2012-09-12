@@ -1,0 +1,27 @@
+<div class="row">
+  <%= form_for(@note) do |f| %>
+    <% if @note.errors.any? %>
+      <div id="error_explanation" class="alert alert-error">
+        <a class="close">×</a>
+        <h2><%= pluralize(@note.errors.count, "error") %> prohibited this note from being saved:</h2>
+        <ul>
+        <% @note.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <fieldset>
+
+      <%= hidden_field_tag 'note[product_id]', params[:id] %>
+
+      <%= f.label :description %>
+      <%= f.text_field :description %>
+
+      <div class="form-actions">
+        <%= f.button 'Create a note', :class =>"btn btn-primary" %>
+      </div>
+      </fieldset>
+
+  <% end %>
+</div>
