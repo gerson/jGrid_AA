@@ -4,7 +4,7 @@ ActiveAdmin.register Product, :as => 'Productizer' do
 
   index :download_links => false do
     table :id => "list4"
-    div :id => "pager4"
+    div :id => "pager4", :style => "height: 35px;"
   end
 
   controller do

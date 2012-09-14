@@ -136,7 +136,7 @@ ActiveAdmin.setup do |config|
   #   config.register_stylesheet 'my_stylesheet.css'
   config.register_stylesheet 'ui.jqgrid.css'
   config.register_stylesheet 'ui.multiselect.css'
-  config.register_stylesheet 'jquery-ui-custom'
+  config.register_stylesheet 'jquery-ui-1.8.23.custom'
   config.register_stylesheet 'colorbox'
 
   

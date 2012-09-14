@@ -2,7 +2,11 @@ jQuery(document).ready(function() {
   jQuery("#list4").jqGrid({
     url:'/admin/productizers',
     datatype: "json",
-    loadComplete: function(){$('#list4').find('a').addClass('colorbox');$('.colorbox').colorbox();},
+    loadComplete: function(e){
+      console.log(e)
+      $('#list4').find('a').each(function(){
+        $(this).addClass('colorbox');$('.colorbox').colorbox();
+    });},
     height: 250,
       colNames:['Id','Name','Supplier', 'Quantity', 'Next Deliver', 'Number of notes','Create Note', 'Show Note'],
       colModel:[
@@ -20,8 +24,7 @@ jQuery(document).ready(function() {
       rowList:[10,20,30],
       pager: '#pager4',
       sortname: 'id',
-      viewrecords: true,
-      caption: "Products"
+      viewrecords: true
   });
   jQuery("#list4").jqGrid('navGrid', '#pager4',{edit:false,add:false,del:false});
 

@@ -1,10 +1,12 @@
-<h3>Notes</h3>
-<% if @notes.size > 0 %>
-  <ul>
-  <% @notes.each do |note| %>
-    <li> <%= note.description %> </li>
+<div style="padding:15px;">
+  <h3>Notes</h3>
+  <% if @notes.size > 0 %>
+    <ul>
+    <% @notes.each do |note| %>
+      <li> <%= note.description %> </li>
+    <% end %>
+    </ul>
+  <% else %>
+    <p>This product has no notes</p>
   <% end %>
-  </ul>
-<% else %>
-  <p>This product has no notes</p>
-<% end %>
+</div>
