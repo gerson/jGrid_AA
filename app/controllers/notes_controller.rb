@@ -2,6 +2,7 @@ class NotesController < ApplicationController
 
   def new
     @note = Note.new
+    render :layout => false
   end
 
   def create
@@ -17,6 +18,7 @@ class NotesController < ApplicationController
   def notes_by_product
     product = Product.find(params[:id])
     @notes = product.notes
+    render :layout => false
   end
 
 end

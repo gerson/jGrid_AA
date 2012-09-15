@@ -3,10 +3,11 @@ jQuery(document).ready(function() {
     url:'/admin/productizers',
     datatype: "json",
     loadComplete: function(e){
-      console.log(e)
       $('#list4').find('a').each(function(){
         $(this).addClass('colorbox');$('.colorbox').colorbox();
-    });},
+      });
+      $('#gbox_list4').addClass('borders');
+    },
     height: 250,
       colNames:['Id','Name','Supplier', 'Quantity', 'Next Deliver', 'Number of notes','Create Note', 'Show Note'],
       colModel:[
